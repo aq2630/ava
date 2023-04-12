@@ -1,0 +1,56 @@
+{
+  "plugins": ["prettier"],
+  "extends": ["plugin:react/recommended", "airbnb-base", "prettier"],
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "jsx": true
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "peerDependencies": true,
+        "optionalDependencies": false
+      }
+    ],
+    "no-unused-vars": [
+      "error",
+      {
+        "args": "none"
+      }
+    ],
+    "no-use-before-define": "off",
+    "import/prefer-default-export": "off",
+    "eol-last": "error",
+    "id-blacklist": "error",
+    "id-match": "error",
+    "import/order": "error",
+    "no-console": "error",
+    "no-debugger": "error",
+    "no-restricted-imports": [
+      "error",
+      {
+        "paths": ["lodash", "moment"],
+        "patterns": ["^(\\.\\.(/)*){2,}.*", "^\\.\\.(/)*$"]
+      }
+    ],
+    "no-underscore-dangle": "error",
+    "object-shorthand": "error",
+    "space-before-function-paren": [
+      "error",
+      {
+        "anonymous": "never",
+        "named": "never"
+      }
+    ],
+    "sort-imports": ["error", { "ignoreDeclarationSort": true }],
+    "react/prop-types": "off"
+  }
+}
